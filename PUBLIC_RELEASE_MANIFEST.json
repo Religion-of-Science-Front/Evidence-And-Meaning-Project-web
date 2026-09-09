@@ -1,0 +1,37 @@
+{
+  "release": "soft-launch-v0.1",
+  "promoted_at_jst": "2026-09-09",
+  "source": {
+    "repository": "Nagi038/Religion-of-Science",
+    "commit": "627b2ea897bd9f4ed0478e1d079b08fa12d51695",
+    "direction": "private-canon-to-public-front-only"
+  },
+  "public_front": {
+    "repository": "Religion-of-Science-Front/religion-of-science-web",
+    "pre_manifest_commit": "f273eed3cd25e0339068edfdbb3d117382a1f73d"
+  },
+  "policy": {
+    "zero_cash_pre_revenue": true,
+    "public_to_private_automatic_sync": false,
+    "private_docs_mirrored": false,
+    "private_founder_governance_mirrored": false,
+    "unpublished_research_mirrored": false,
+    "private_ip_or_automation_mirrored": false
+  },
+  "published_paths": [
+    "site/404.html",
+    "site/_headers",
+    "site/assets/site.css",
+    "site/index.html",
+    "site/practice/index.html",
+    "site/worldview/index.html",
+    "site/faq/index.html",
+    "site/trust/index.html",
+    "site/participate/index.html",
+    "site/articles/index.html",
+    "site/articles/why-build-religion/index.html",
+    "site/articles/no-afterlife-guarantee/index.html",
+    "site/articles/three-minute-worship/index.html",
+    "wrangler.jsonc"
+  ]
+}
