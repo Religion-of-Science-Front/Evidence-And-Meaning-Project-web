@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "religion-of-science",
+  "name": "evidence-and-meaning",
   "compatibility_date": "2026-09-07",
   "assets": {
     "directory": "./site",

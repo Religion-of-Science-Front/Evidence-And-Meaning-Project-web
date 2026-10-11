@@ -1,37 +1,109 @@
 {
-  "release": "soft-launch-v0.1",
-  "promoted_at_jst": "2026-09-09",
-  "source": {
-    "repository": "Nagi038/Religion-of-Science",
-    "commit": "627b2ea897bd9f4ed0478e1d079b08fa12d51695",
-    "direction": "private-canon-to-public-front-only"
-  },
-  "public_front": {
-    "repository": "Religion-of-Science-Front/religion-of-science-web",
-    "pre_manifest_commit": "f273eed3cd25e0339068edfdbb3d117382a1f73d"
-  },
-  "policy": {
-    "zero_cash_pre_revenue": true,
-    "public_to_private_automatic_sync": false,
-    "private_docs_mirrored": false,
-    "private_founder_governance_mirrored": false,
-    "unpublished_research_mirrored": false,
-    "private_ip_or_automation_mirrored": false
-  },
-  "published_paths": [
-    "site/404.html",
-    "site/_headers",
-    "site/assets/site.css",
-    "site/index.html",
-    "site/practice/index.html",
-    "site/worldview/index.html",
-    "site/faq/index.html",
-    "site/trust/index.html",
-    "site/participate/index.html",
-    "site/articles/index.html",
-    "site/articles/why-build-religion/index.html",
-    "site/articles/no-afterlife-guarantee/index.html",
-    "site/articles/three-minute-worship/index.html",
-    "wrangler.jsonc"
+  "release_type": "public-front-promotion",
+  "source_repository": "Nagi038/Evidence-And-Meaning",
+  "source_ref": "1ee10d29171e1c3d52a836c0e9ddf1b8086a74c2",
+  "generated_at_utc": "2026-10-11T09:35:19.106635+00:00",
+  "policy": "allowlist-only; no public-to-private automatic sync",
+  "files": [
+    {
+      "path": ".github/workflows/site-static-validate.yml",
+      "sha256": "9e7a15fa25977fedc749dbe3ce2b3f0a6958f9a18da9e2e8776c6cfada056cc4",
+      "bytes": 1288
+    },
+    {
+      "path": "README.md",
+      "sha256": "f09f593934cfc852aaa618929297a1ea84efd45eec2d11e6f5265c045726ab29",
+      "bytes": 600
+    },
+    {
+      "path": "automation/validate_security_posture.py",
+      "sha256": "cd9861d951aebc2c0a3ca1de7048dc6efc9cf4a3f209b8a17fd9058325a01dc8",
+      "bytes": 3622
+    },
+    {
+      "path": "automation/validate_static_site.py",
+      "sha256": "9c3dea06df715e1e13be2ec926a6ee30c2c992975d3dfb825e15463a22ca2427",
+      "bytes": 3624
+    },
+    {
+      "path": "site/404.html",
+      "sha256": "d1fbdae909702be2fa2418c89756568296125a8c3fa5fa0a336871b8b707bbc3",
+      "bytes": 2874
+    },
+    {
+      "path": "site/_headers",
+      "sha256": "0af984e17395efa72a6caa3a9c2a0bb4753016bb53284870d8162f0fb56521b3",
+      "bytes": 693
+    },
+    {
+      "path": "site/articles/index.html",
+      "sha256": "ec7c7069b7fb8dc94660fda2ccfe868f9826283fb6088490b1acbb39af87bcbe",
+      "bytes": 4011
+    },
+    {
+      "path": "site/articles/no-afterlife-guarantee/index.html",
+      "sha256": "7af6badb97fbf6055357e8e03e59ed95a79652c63092dd4a53e371972f41303a",
+      "bytes": 8011
+    },
+    {
+      "path": "site/articles/three-minute-worship/index.html",
+      "sha256": "01c3962678d2036a53a14f50235457b56b92bcebf2f73bfd4dc9c8c613e79153",
+      "bytes": 9410
+    },
+    {
+      "path": "site/articles/why-build-religion/index.html",
+      "sha256": "0c37f9fdef56f45c42733ba4886cd009f3c9cc0233c245f9711ab91257b69547",
+      "bytes": 7689
+    },
+    {
+      "path": "site/assets/site.css",
+      "sha256": "4c10dce04e6e078d8ad56b9998afb5d043cb52d35cdeacdd7b20505ea02c0acb",
+      "bytes": 7196
+    },
+    {
+      "path": "site/evidence/index.html",
+      "sha256": "c8b9d846a98da7b3c1b878873a5ce288008b5e0cfd77f4f655492b09c1ba187a",
+      "bytes": 16259
+    },
+    {
+      "path": "site/faq/index.html",
+      "sha256": "0ce9e5b7e63eb5f99cb168d7685cd9babc0ef7c15f25c58ebe83bbdccd40d54b",
+      "bytes": 12845
+    },
+    {
+      "path": "site/index.html",
+      "sha256": "513f9c64452b51cf224ac0febaa870927c55123b6b0f8c447420a179e58415d7",
+      "bytes": 10143
+    },
+    {
+      "path": "site/participate/index.html",
+      "sha256": "7d1db7d065a34710d12c75b2efd9ed0faac6c45336d28bac778ff2caf9282432",
+      "bytes": 5156
+    },
+    {
+      "path": "site/practice/index.html",
+      "sha256": "3aae5ae1cbdfbbbb444dd8bdbe72e03dd22532235248724e0176b79474248e4f",
+      "bytes": 20930
+    },
+    {
+      "path": "site/refuge/index.html",
+      "sha256": "428843c0a44b8594806d5e81ed9354ea60314c59f1fceaabe0ca5f5cce4700bd",
+      "bytes": 7967
+    },
+    {
+      "path": "site/trust/index.html",
+      "sha256": "639c8e44249727128e71c57badbc82cfc13f55ed199c79049fa07a16bc79dc20",
+      "bytes": 12776
+    },
+    {
+      "path": "site/worldview/index.html",
+      "sha256": "6a2d545a2d19b6191e17d3a78e96daa17854cb0510622795762abbf507649c1d",
+      "bytes": 9019
+    },
+    {
+      "path": "wrangler.jsonc",
+      "sha256": "0251b09e68bb555a088c7dde180198cb94e50c843e6752a99c620279c77f552c",
+      "bytes": 261
+    }
   ]
 }
