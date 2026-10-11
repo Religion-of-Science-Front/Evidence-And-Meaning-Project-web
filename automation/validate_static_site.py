@@ -3,6 +3,7 @@ from __future__ import annotations
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse
+import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1] / "site"
@@ -13,6 +14,32 @@ FORBIDDEN_PUBLIC_PHRASES = [
     "自然は聖なる",
     "生命は科学的に聖なる",
 ]
+
+# D-060 (2026-10-11): public identity is "not a religion; takes on the role
+# religion has played". No public page may self-identify as a religion or use
+# the superseded internal vocabulary (docs/00_project/PUBLIC_VOCABULARY.md).
+# The corrections log (<section id="corrections">) is exempt, because an honest
+# record has to quote the old wording it replaced.
+FORBIDDEN_SELF_IDENTIFICATION = [
+    ("3分礼拝", None),
+    ("最小礼拝", None),
+    ("共同礼拝", None),
+    ("信者", None),
+    ("宗教をつくろう", None),
+    ("宗教をつくる", None),
+    # "これは宗教です" as an assertion; the question "これは宗教ですか？" is allowed.
+    ("これは宗教です", re.compile(r"これは宗教です(?!か)")),
+]
+
+IDENTITY_STATEMENT = "私たちは宗教ではありません"
+IDENTITY_REQUIRED_PAGES = [
+    "faq/index.html",
+    "trust/index.html",
+]
+
+CORRECTIONS_SECTION = re.compile(
+    r'<section\b[^>]*\bid="corrections"[^>]*>.*?</section>', re.DOTALL
+)
 
 REQUIRED_PATHS = [
     "index.html",
@@ -83,6 +110,13 @@ def main() -> int:
         if not (ROOT / required).exists():
             errors.append(f"required path missing: {required}")
 
+    for page in IDENTITY_REQUIRED_PAGES:
+        page_path = ROOT / page
+        if page_path.exists():
+            page_text = CORRECTIONS_SECTION.sub("", page_path.read_text(encoding="utf-8"))
+            if IDENTITY_STATEMENT not in page_text:
+                errors.append(f"{page}: D-060 identity statement missing: {IDENTITY_STATEMENT}")
+
     html_files = sorted(ROOT.rglob("*.html"))
     if not html_files:
         errors.append("No HTML files found under site/")
@@ -93,6 +127,15 @@ def main() -> int:
         for phrase in FORBIDDEN_PUBLIC_PHRASES:
             if phrase in text:
                 errors.append(f"{path.relative_to(ROOT)}: superseded wording found: {phrase}")
+
+        public_text = CORRECTIONS_SECTION.sub("", text)
+        for label, pattern in FORBIDDEN_SELF_IDENTIFICATION:
+            found = pattern.search(public_text) if pattern else (label in public_text)
+            if found:
+                errors.append(
+                    f"{path.relative_to(ROOT)}: religion self-identification / "
+                    f"superseded public word found (D-060): {label}"
+                )
 
         parser = Parser()
         try:
