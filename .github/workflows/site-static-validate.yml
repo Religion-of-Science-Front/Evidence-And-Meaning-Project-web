@@ -1,0 +1,36 @@
+name: Validate static public site
+
+on:
+  push:
+    paths:
+      - 'site/**'
+      - 'automation/validate_static_site.py'
+      - 'automation/validate_security_posture.py'
+      - 'docs/30_founder_and_governance/FOUNDER_SECURITY_ARCHITECTURE.md'
+      - 'docs/80_operations/FOUNDER_ROOT_ACCOUNT_HARDENING_RUNBOOK.md'
+      - 'docs/80_operations/FOUNDER_ROOT_ASSET_REGISTER.md'
+      - 'wrangler.jsonc'
+      - '.github/workflows/site-static-validate.yml'
+  pull_request:
+    paths:
+      - 'site/**'
+      - 'automation/validate_static_site.py'
+      - 'automation/validate_security_posture.py'
+      - 'docs/30_founder_and_governance/FOUNDER_SECURITY_ARCHITECTURE.md'
+      - 'docs/80_operations/FOUNDER_ROOT_ACCOUNT_HARDENING_RUNBOOK.md'
+      - 'docs/80_operations/FOUNDER_ROOT_ASSET_REGISTER.md'
+      - 'wrangler.jsonc'
+      - '.github/workflows/site-static-validate.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate HTML links, assets, required pages, and superseded public wording
+        run: python automation/validate_static_site.py
+      - name: Validate Founder security posture and scan for high-confidence secrets
+        run: python automation/validate_security_posture.py
