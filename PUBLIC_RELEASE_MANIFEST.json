@@ -1,8 +1,8 @@
 {
   "release_type": "public-front-promotion",
   "source_repository": "Nagi038/Evidence-And-Meaning",
-  "source_ref": "1ee10d29171e1c3d52a836c0e9ddf1b8086a74c2",
-  "generated_at_utc": "2026-10-11T09:35:19.106635+00:00",
+  "source_ref": "2ccffe541b698b0c5305d01a5f34560b5a49acf6",
+  "generated_at_utc": "2026-10-11T10:40:11.895276+00:00",
   "policy": "allowlist-only; no public-to-private automatic sync",
   "files": [
     {
@@ -22,13 +22,13 @@
     },
     {
       "path": "automation/validate_static_site.py",
-      "sha256": "9c3dea06df715e1e13be2ec926a6ee30c2c992975d3dfb825e15463a22ca2427",
-      "bytes": 3624
+      "sha256": "291af6b5695af9b2b8bce242fe657f1e95b7b18acc113aea53d5e76990e73415",
+      "bytes": 5405
     },
     {
       "path": "site/404.html",
-      "sha256": "d1fbdae909702be2fa2418c89756568296125a8c3fa5fa0a336871b8b707bbc3",
-      "bytes": 2874
+      "sha256": "a57dab1a25383f933d97433f51c2f986acd9f71118c065558c003590fe953536",
+      "bytes": 2883
     },
     {
       "path": "site/_headers",
@@ -37,23 +37,23 @@
     },
     {
       "path": "site/articles/index.html",
-      "sha256": "ec7c7069b7fb8dc94660fda2ccfe868f9826283fb6088490b1acbb39af87bcbe",
-      "bytes": 4011
+      "sha256": "a297d976d6fb64073b95106092af9af9c2fff94e8982e9cc974b53984ca5b041",
+      "bytes": 4186
     },
     {
       "path": "site/articles/no-afterlife-guarantee/index.html",
-      "sha256": "7af6badb97fbf6055357e8e03e59ed95a79652c63092dd4a53e371972f41303a",
-      "bytes": 8011
+      "sha256": "a44fdbd082c4aa185ed3d7239e032d53457b6c60d01cd17813fc05ceaf41f5d6",
+      "bytes": 8260
     },
     {
       "path": "site/articles/three-minute-worship/index.html",
-      "sha256": "01c3962678d2036a53a14f50235457b56b92bcebf2f73bfd4dc9c8c613e79153",
-      "bytes": 9410
+      "sha256": "16fd2bd8bed6f758b8e12f476335589993c7e10e367ce75a777446f12816ba2c",
+      "bytes": 9588
     },
     {
       "path": "site/articles/why-build-religion/index.html",
-      "sha256": "0c37f9fdef56f45c42733ba4886cd009f3c9cc0233c245f9711ab91257b69547",
-      "bytes": 7689
+      "sha256": "bf471204f18f8d93e35dd3f90925b52f379944929b8230f568d7320dc46178a8",
+      "bytes": 8367
     },
     {
       "path": "site/assets/site.css",
@@ -62,43 +62,43 @@
     },
     {
       "path": "site/evidence/index.html",
-      "sha256": "c8b9d846a98da7b3c1b878873a5ce288008b5e0cfd77f4f655492b09c1ba187a",
-      "bytes": 16259
+      "sha256": "1c8daa988bcf454991b53deb5e3ece3fd63d1fac8118f2ec8090eed41fcedb5d",
+      "bytes": 16348
     },
     {
       "path": "site/faq/index.html",
-      "sha256": "0ce9e5b7e63eb5f99cb168d7685cd9babc0ef7c15f25c58ebe83bbdccd40d54b",
-      "bytes": 12845
+      "sha256": "de5f30ceb44c810141b6e8b7d7f58ce1d0b0814bcac10bf450a462cc64dec705",
+      "bytes": 14029
     },
     {
       "path": "site/index.html",
-      "sha256": "513f9c64452b51cf224ac0febaa870927c55123b6b0f8c447420a179e58415d7",
-      "bytes": 10143
+      "sha256": "541d8d034dd8d972f7d0e67a7a00765166cd59877b9411fe045f67358f03f3f5",
+      "bytes": 10995
     },
     {
       "path": "site/participate/index.html",
-      "sha256": "7d1db7d065a34710d12c75b2efd9ed0faac6c45336d28bac778ff2caf9282432",
-      "bytes": 5156
+      "sha256": "35998636a4287dd1a05cc45e86a738b9a595dd86ae48ebd67131d8b83b7cb860",
+      "bytes": 5325
     },
     {
       "path": "site/practice/index.html",
-      "sha256": "3aae5ae1cbdfbbbb444dd8bdbe72e03dd22532235248724e0176b79474248e4f",
-      "bytes": 20930
+      "sha256": "d2ff83a4347f02170aa5ea7b12f0938e3754a3486e4d8ab9db3c3b994a88bb13",
+      "bytes": 21173
     },
     {
       "path": "site/refuge/index.html",
-      "sha256": "428843c0a44b8594806d5e81ed9354ea60314c59f1fceaabe0ca5f5cce4700bd",
-      "bytes": 7967
+      "sha256": "e5711ce6da1e9e6d43a80d1f46bbbf8d050a93ea3e4ccd6f8d445d7b8b2c91bd",
+      "bytes": 8102
     },
     {
       "path": "site/trust/index.html",
-      "sha256": "639c8e44249727128e71c57badbc82cfc13f55ed199c79049fa07a16bc79dc20",
-      "bytes": 12776
+      "sha256": "de62d17a27cb7441944c7d208501945d35ca3ce903ed81f87344b804d5b8ee24",
+      "bytes": 16927
     },
     {
       "path": "site/worldview/index.html",
-      "sha256": "6a2d545a2d19b6191e17d3a78e96daa17854cb0510622795762abbf507649c1d",
-      "bytes": 9019
+      "sha256": "3cc81bf164573c1a32dfc8033d2c2383f1b18809bda5fd4bc11b359f5663a665",
+      "bytes": 9059
     },
     {
       "path": "wrangler.jsonc",
